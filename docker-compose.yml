@@ -1,0 +1,55 @@
+version: "3"
+
+services:
+  nginx:
+    image: nginx:latest
+    env_file:
+      - .env
+    volumes:
+      - ./.docker/nginx/templates:/etc/nginx/templates/
+      - ./:/var/www/project
+      - ./var/log:/var/log/nginx
+    ports:
+      - 8001:80
+    depends_on:
+      - php
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.whoami.rule=Host(`${PROJECT_DOMAIN}.localhost`)'
+      - 'traefik.http.routers.whoami.entrypoints=web'
+
+  php:
+    image: php:7.4-fpm
+    env_file:
+      - .env
+    volumes:
+      - ./:/var/www/project
+
+  composer:
+    image: composer:latest
+    command: >
+      sh -c "
+        composer install --optimize-autoloader &&
+        composer dump-autoload --optimize
+      "
+    volumes:
+      - ./:/app
+
+  traefik:
+    image: traefik:v2.3
+    env_file:
+      - .env
+    command:
+      - '--api.insecure=true'
+      - '--providers.docker=true'
+      - '--providers.docker.exposedbydefault=false'
+      - '--entrypoints.web.address=:80'
+    ports:
+      - 80:80
+      - 8080:8080
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+
+networks:
+  default:
+    driver: bridge
