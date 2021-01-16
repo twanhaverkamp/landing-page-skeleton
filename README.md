@@ -1,5 +1,5 @@
 # Landing page skeleton
-This project contains a lightweight Symfony 5 installation with the bear minimum amount of components
+This project contains a lightweight Symfony 5 installation with only the bear minimum amount of components
 to function as a skeleton for new landing pages. Once you forked this repository
 it's up to you to modify it to your own needs.
 
@@ -9,7 +9,7 @@ This project runs on [Docker Compose] and therefore requires that you have [Dock
 Once you have done that, run the following command in your terminal:
 
 ```
-$ docker-compose up --build
+$ docker-compose up -d --build
 ```
 
 ### Traefik
@@ -18,6 +18,14 @@ http://my-landing-page.localhost
 
 > *Note: The URL can be changed by editing the `PROJECT_DOMAIN` environment variable.*
 
+### Composer
+To install [Composer] packages you can run the following command:
+
+```
+$ docker-compose run composer require ...
+```
+
+[Composer]: https://getcomposer.org/doc/00-intro.md
 [Docker Compose]: https://docs.docker.com/compose/
 [Docker Desktop]: https://www.docker.com/products/docker-desktop
 [Traefik]: https://doc.traefik.io/traefik/
