@@ -24,9 +24,12 @@ services:
       - .env
     volumes:
       - ./:/var/www/project
+    working_dir: /var/www/project/
 
   composer:
     image: composer:latest
+    environment:
+      - COMPOSER_CACHE_DIR=/app/var/cache/composer
     command: >
       sh -c "
         composer install --optimize-autoloader &&
