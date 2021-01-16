@@ -1,7 +1,10 @@
-# Getting started
-## Installation
-Fork this repository and change the configuration to your needs.
+# Landing page skeleton
+This project contains a lightweight Symfony 5 installation with the bear minimum amount of components
+to function as a skeleton for new landing pages. Once you forked this repository
+it's up to you to modify it to your own needs.
 
+## Getting started
+### Installation
 This project runs on [Docker Compose] and therefore requires that you have [Docker Desktop] installed.
 Once you have done that, run the following command in your terminal:
 
@@ -9,7 +12,7 @@ Once you have done that, run the following command in your terminal:
 $ docker-compose up --build
 ```
 
-## Traefik
+### Traefik
 Thanks to [Traefik] you can now access the project with this URL:
 http://my-landing-page.localhost
 
