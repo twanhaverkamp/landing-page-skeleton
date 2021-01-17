@@ -25,7 +25,16 @@ To install [Composer] packages you can run the following command:
 $ docker-compose run composer require ...
 ```
 
+### PHPUnit
+This project comes with [PHPUnit], where functional and unit tests are organized in two separate directories.
+To execute all tests, run the following command:
+
+```
+$ docker-compose run phpunit
+```
+
 [Composer]: https://getcomposer.org/doc/00-intro.md
 [Docker Compose]: https://docs.docker.com/compose/
 [Docker Desktop]: https://www.docker.com/products/docker-desktop
+[PHPUnit]: https://phpunit.readthedocs.io/en/9.5/
 [Traefik]: https://doc.traefik.io/traefik/
