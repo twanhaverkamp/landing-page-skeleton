@@ -1,0 +1,13 @@
+customer:
+  gender: Geslacht
+  gender.male: Man
+  gender.female: Vrouw
+  first_name: Voornaam
+  last_name: Achternaam
+  email_address: E-mailadres
+  date_of_birth: Geboortedatum
+  date_of_birth.select_year: Jaar
+  date_of_birth.select_month: Maand
+  date_of_birth.select_day: Dag
+  submit:
+    register_new: Registreren

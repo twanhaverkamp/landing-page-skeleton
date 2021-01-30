@@ -1,0 +1,6 @@
+error:
+  invalid: '{{ label }} ongeldig'
+  invalid_choice: 'De geselecteerde waarde is geen geldige keuze'
+  invalid_max_length: '{{ label }} mag maximaal {{ limit }} tekens bevatten'
+  invalid_min_length: '{{ label }} moet minimaal {{ limit }} teken bevatten'
+  invalid_pattern: '{{ label }} bevat ongeldige tekens'

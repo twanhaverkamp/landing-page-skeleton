@@ -1,0 +1,13 @@
+customer:
+  gender: Gender
+  gender.male: Male
+  gender.female: Female
+  first_name: First name
+  last_name: Last name
+  email_address: E-mail address
+  date_of_birth: Date of birth
+  date_of_birth.select_year: Year
+  date_of_birth.select_month: Month
+  date_of_birth.select_day: Day
+  submit:
+    register_new: Register
