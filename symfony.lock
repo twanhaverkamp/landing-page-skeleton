@@ -133,6 +133,9 @@
     "sebastian/version": {
         "version": "3.0.2"
     },
+    "symfony/browser-kit": {
+        "version": "v5.2.2"
+    },
     "symfony/cache": {
         "version": "v5.2.1"
     },
@@ -159,6 +162,9 @@
     },
     "symfony/deprecation-contracts": {
         "version": "v2.2.0"
+    },
+    "symfony/dom-crawler": {
+        "version": "v5.2.2"
     },
     "symfony/dotenv": {
         "version": "v5.2.1"
