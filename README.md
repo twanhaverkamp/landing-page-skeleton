@@ -18,14 +18,14 @@ http://my-landing-page.localhost
 
 > *Note: The URL can be changed by editing the `PROJECT_DOMAIN` environment variable.*
 
-### Composer
+## Composer
 To install [Composer] packages you can run the following command:
 
 ```
 $ docker-compose run composer require ...
 ```
 
-### PHPUnit
+## PHPUnit
 This project comes with [PHPUnit], where functional and unit tests are organized in two separate directories.
 To execute all tests, run the following command:
 
