@@ -1,10 +1,20 @@
 {
+    "name": "twanhaverkamp/landing-page-skeleton",
+    "description": "This project contains a lightweight Symfony 5 installation with only the bear minimum amount of components to function as a skeleton for new landing pages.",
     "type": "project",
-    "license": "proprietary",
+    "license": "MIT",
     "minimum-stability": "dev",
     "prefer-stable": true,
+    "authors": [
+        {
+            "name": "Twan Haverkamp",
+            "email": "twan@mailcampaigns.nl",
+            "homepage": "https://www.linkedin.com/in/twanhaverkamp",
+            "role": "Developer"
+        }
+    ],
     "require": {
-        "php": ">=7.2.5",
+        "php": ">=7.4",
         "ext-ctype": "*",
         "ext-iconv": "*",
         "doctrine/annotations": "^1.11",
@@ -28,6 +38,9 @@
     },
     "config": {
         "optimize-autoloader": true,
+        "platform": {
+            "php": "7.4"
+        },
         "preferred-install": {
             "*": "dist"
         },
