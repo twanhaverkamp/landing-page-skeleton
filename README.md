@@ -9,10 +9,9 @@ This project runs on [Docker Compose] and therefore requires that you have [Dock
 Once you have done that, run the following command in your terminal:
 
 ```
-$ docker-compose up -d --build
+$ docker-compose up -d
 ```
 
-## Traefik
 Thanks to [Traefik] you can now access the project with this URL:
 http://my-landing-page.localhost
 
