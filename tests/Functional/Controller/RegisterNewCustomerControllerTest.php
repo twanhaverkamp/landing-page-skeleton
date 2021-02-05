@@ -76,7 +76,7 @@ class RegisterNewCustomerControllerTest extends WebTestCase
     public function getTranslatedFormLabels(): iterable
     {
         yield [
-            'translatedUrl' => '/en/register',
+            'translatedUrl' => '/en/register-new-customer',
             'expectedTranslatedLabels' => [
                 'Gender',
                 'Male',
@@ -89,7 +89,7 @@ class RegisterNewCustomerControllerTest extends WebTestCase
         ];
 
         yield [
-            'translatedUrl' => '/nl/registreren',
+            'translatedUrl' => '/nl/registreren-nieuwe-klant',
             'expectedTranslatedLabels' => [
                 'Geslacht',
                 'Man',
@@ -105,8 +105,8 @@ class RegisterNewCustomerControllerTest extends WebTestCase
     public function getValidFormData(): iterable
     {
         yield [
-            'translatedUrl' => '/en/register',
-            'translatedRedirectUrl' => '/en/registration-confirmed',
+            'translatedUrl' => '/en/register-new-customer',
+            'translatedRedirectUrl' => '/en/registration-new-customer-confirmed',
             'translatedButtonValue' => 'Register',
             'formData' => [
                 'register_new_customer[gender]' => Customer::GENDER_MALE,
@@ -120,8 +120,8 @@ class RegisterNewCustomerControllerTest extends WebTestCase
         ];
 
         yield [
-            'translatedUrl' => '/nl/registreren',
-            'translatedRedirectUrl' => '/nl/registratie-bevestigd',
+            'translatedUrl' => '/nl/registreren-nieuwe-klant',
+            'translatedRedirectUrl' => '/nl/registratie-nieuwe-klant-bevestigd',
             'translatedButtonValue' => 'Registreren',
             'formData' => [
                 'register_new_customer[gender]' => Customer::GENDER_FEMALE,
@@ -138,7 +138,7 @@ class RegisterNewCustomerControllerTest extends WebTestCase
     public function getInvalidFormData(): iterable
     {
         yield [
-            'translatedUrl' => '/en/register',
+            'translatedUrl' => '/en/register-new-customer',
             'translatedButtonValue' => 'Register',
             'formData' => [
                 'register_new_customer[firstName]' => 'J0hn',
@@ -153,7 +153,7 @@ class RegisterNewCustomerControllerTest extends WebTestCase
         ];
 
         yield [
-            'translatedUrl' => '/nl/registreren',
+            'translatedUrl' => '/nl/registreren-nieuwe-klant',
             'translatedButtonValue' => 'Registreren',
             'formData' => [
                 'register_new_customer[firstName]' => 'J@ne',

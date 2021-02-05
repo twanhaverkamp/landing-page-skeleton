@@ -16,8 +16,8 @@ use Symfony\Contracts\HttpClient\HttpClientInterface;
  * @author Twan Haverkamp <twan@mailcampaigns.nl>
  *
  * @Route({
- *     "en": "/register",
- *     "nl": "/registreren",
+ *     "en": "/register-new-customer",
+ *     "nl": "/registreren-nieuwe-klant",
  * }, name="register_new_customer", methods={"GET", "POST"})
  */
 final class RegisterNewCustomerController extends AbstractController

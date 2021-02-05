@@ -10,8 +10,8 @@ use Symfony\Component\Routing\Annotation\Route;
  * @author Twan Haverkamp <twan@mailcampaigns.nl>
  *
  * @Route({
- *     "en": "/registration-confirmed",
- *     "nl": "/registratie-bevestigd",
+ *     "en": "/registration-new-customer-confirmed",
+ *     "nl": "/registratie-nieuwe-klant-bevestigd",
  * }, name="confirm_new_customer_registration", methods={"GET"})
  */
 final class ConfirmNewCustomerRegistrationController extends AbstractController
