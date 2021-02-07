@@ -15,7 +15,7 @@ services:
       - php
     labels:
       - 'traefik.enable=true'
-      - 'traefik.http.routers.whoami.rule=Host(`${PROJECT_DOMAIN}.localhost`)'
+      - 'traefik.http.routers.whoami.rule=Host(`${PROJECT_DOMAIN}`)'
       - 'traefik.http.routers.whoami.entrypoints=web'
 
   php:
