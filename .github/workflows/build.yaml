@@ -21,7 +21,7 @@ jobs:
         run: docker-compose up -d --scale phpunit=0
 
       - name: Install Composer dependencies
-        run: composer install
+        uses: php-actions/composer@v5
 
       - name: Run PHPUnit
-        run: php7.4 ./vendor/bin/phpunit --testdox
+        uses: php-actions/phpunit@v9
