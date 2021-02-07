@@ -20,5 +20,5 @@ jobs:
       - name: Create and start Docker containers
         run: docker-compose up -d
 
-      - name: Run PHPUnit
-        run: docker-compose run phpunit --testdox
+#      - name: Run PHPUnit
+#        run: docker-compose run phpunit --testdox

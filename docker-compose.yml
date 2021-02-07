@@ -26,11 +26,6 @@ services:
       - ./:/var/www/project
     working_dir: /var/www/project/
 
-  phpunit:
-    extends:
-      service: php
-    entrypoint: ./vendor/bin/phpunit
-
   composer:
     image: composer:latest
     environment:
