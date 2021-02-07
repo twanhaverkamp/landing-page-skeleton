@@ -29,7 +29,7 @@ services:
   phpunit:
     extends:
       service: php
-    entrypoint: ./vendor/bin/phpunit
+    entrypoint: ./vendor/bin/phpunit --testdox
 
   composer:
     image: composer:latest
