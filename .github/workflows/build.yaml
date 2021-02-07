@@ -17,7 +17,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Create Docker containers and run PHPUnit
-        run: |
-          docker-compose up -d
-          docker-compose run php ./vendor/bin/phpunit --testdox
+      - name: Create and start Docker containers
+        run: docker-compose up -d --scale phpunit=0
+
+      - name: Install Composer dependencies
+        run: composer install
+
+      - name: Run PHPUnit
+        run: php7.4 ./vendor/bin/phpunit --testdox

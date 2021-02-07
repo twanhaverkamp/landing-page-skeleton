@@ -29,7 +29,7 @@ This project comes with [PHPUnit], where functional and unit tests are organized
 To execute all tests, run the following command:
 
 ```
-$ docker-compose run php ./vendor/bin/phpunit
+$ docker-compose run phpunit
 ```
 
 [Composer]: https://getcomposer.org/doc/00-intro.md
