@@ -19,12 +19,11 @@ services:
       - 'traefik.http.routers.whoami.entrypoints=web'
 
   php:
-    image: php:7.4-fpm
+    build:
+      context: .
+      dockerfile: .docker/php/Dockerfile
     env_file:
       - .env
-    volumes:
-      - ./:/var/www/project
-    working_dir: /var/www/project/
 
   composer:
     image: composer:latest
