@@ -17,6 +17,8 @@ class RegisterNewCustomerControllerTest extends WebTestCase
 {
     /**
      * @dataProvider getTranslatedFormLabels
+     *
+     * @param array<string> $expectedTranslatedLabels
      */
     public function testInvokeReturnsFormWithTranslatedLabels(
         string $translatedUrl,
@@ -33,6 +35,8 @@ class RegisterNewCustomerControllerTest extends WebTestCase
 
     /**
      * @dataProvider getValidFormData
+     *
+     * @param array<string, mixed> $formData
      */
     public function testInvokeWithValidFormDataWillRedirect(
         string $translatedUrl,
@@ -53,6 +57,9 @@ class RegisterNewCustomerControllerTest extends WebTestCase
 
     /**
      * @dataProvider getInvalidFormData
+     *
+     * @param array<string, mixed> $formData
+     * @param array<string>        $expectedErrorMessages
      */
     public function testInvokeWithInvalidFormDataWillReturnWithErrorMessages(
         string $translatedUrl,
@@ -73,6 +80,9 @@ class RegisterNewCustomerControllerTest extends WebTestCase
         }
     }
 
+    /**
+     * @return array<string, array<string, mixed>>
+     */
     public function getTranslatedFormLabels(): iterable
     {
         return [
@@ -103,6 +113,9 @@ class RegisterNewCustomerControllerTest extends WebTestCase
         ];
     }
 
+    /**
+     * @return array<string, array<string, mixed>>
+     */
     public function getValidFormData(): iterable
     {
         return [
@@ -137,6 +150,9 @@ class RegisterNewCustomerControllerTest extends WebTestCase
         ];
     }
 
+    /**
+     * @return array<string, array<string, mixed>>
+     */
     public function getInvalidFormData(): iterable
     {
         return [
